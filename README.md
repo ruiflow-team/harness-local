@@ -1,17 +1,22 @@
-[![Release](https://img.shields.io/badge/release-v0.24.1--beta-2ECFB0)](https://github.com/ruiflow-team/harness-local/releases/tag/v0.24.1-beta)
+[![Release](https://img.shields.io/badge/release-v0.24.2--beta-2ECFB0)](https://github.com/ruiflow-team/harness-local/releases/tag/v0.24.2-beta)
 [![Pages](https://img.shields.io/badge/pages-live-5AA9D6)](https://ruiflow-team.github.io/harness-local/)
 [![Public Check](https://github.com/ruiflow-team/harness-local/actions/workflows/public-check.yml/badge.svg)](https://github.com/ruiflow-team/harness-local/actions/workflows/public-check.yml)
 [![Local First](https://img.shields.io/badge/default-127.0.0.1-667EEA)](#安全边界)
 
 # Harness Local
 
-**本地 AI 项目体检工具｜v0.24.1 Beta**
+**本地 AI 项目体检工具｜v0.24.2 Beta**
 
 Harness Local 帮你在电脑本地启动一个轻量 AI 项目工作台，先做项目接入前的安全边界、启动状态和交付准备度检查。
 
-当前版本面向中国种子用户测试：默认中文说明、默认本地运行、默认绑定 `127.0.0.1`。
+当前版本是 Beta：默认中文面板、默认中文说明、默认本地运行、默认绑定 `127.0.0.1`。
 
 官网说明页：<https://ruiflow-team.github.io/harness-local/>
+
+## v0.24.2 更新
+
+- 主面板中文优先：总览 / 项目 / 任务 / 证据 / 发布 / 安装包 QA / 发布中心。
+- 保留本地优先边界：默认 `127.0.0.1`，不默认上传项目。
 
 ## 快速开始
 
@@ -24,11 +29,11 @@ curl -L https://ruiflow-team.github.io/harness-local/install.sh | sh
 手动下载：
 
 ```bash
-curl -L -o harness-local-v0.24.1-beta.zip \
-  https://github.com/ruiflow-team/harness-local/releases/download/v0.24.1-beta/harness-local-v0.24.1-beta.zip
+curl -L -o harness-local-v0.24.2-beta.zip \
+  https://github.com/ruiflow-team/harness-local/releases/download/v0.24.2-beta/harness-local-v0.24.2-beta.zip
 
-shasum -a 256 harness-local-v0.24.1-beta.zip
-unzip harness-local-v0.24.1-beta.zip
+shasum -a 256 harness-local-v0.24.2-beta.zip
+unzip harness-local-v0.24.2-beta.zip
 cd harness-local-v0.24-beta
 ./harness serve
 ```
@@ -48,9 +53,9 @@ http://127.0.0.1:8788
 
 ## 下载校验
 
-- Release：<https://github.com/ruiflow-team/harness-local/releases/tag/v0.24.1-beta>
-- Package：`harness-local-v0.24.1-beta.zip`
-- SHA256：`6a2ba60462ab50a4130920075c35dc3dcd0760246899caa112ac807f31cbb2d0`
+- Release：<https://github.com/ruiflow-team/harness-local/releases/tag/v0.24.2-beta>
+- Package：`harness-local-v0.24.2-beta.zip`
+- SHA256：`e609a51ac024288967fbbbb14dd4107148bcf2eebadc9c293c4491c2bbf10ea9`
 
 ## 配置
 

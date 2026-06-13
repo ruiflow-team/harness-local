@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Harness Local v0.24.1 Beta｜本地 AI 项目体检工具</title>
-  <meta name="description" content="Harness Local 是一个本地优先的 AI 项目体检工具，默认 127.0.0.1、本地运行、不默认上传项目，正在招募种子用户测试。" />
-  <meta property="og:title" content="Harness Local v0.24.1 Beta｜本地 AI 项目体检工具" />
-  <meta property="og:description" content="默认本地运行，不默认上传项目，不读取凭证文件。现招募种子用户测试。" />
+  <title>Harness Local v0.24.2 Beta｜本地 AI 项目体检工具 · 中文本地面板</title>
+  <meta name="description" content="Harness Local 是一个本地优先的 AI 项目体检工具，v0.24.2 起主面板中文优先；默认 127.0.0.1、本地运行、不默认上传项目。" />
+  <meta property="og:title" content="Harness Local v0.24.2 Beta｜本地 AI 项目体检工具 · 中文本地面板" />
+  <meta property="og:description" content="中文本地面板，默认本地运行，不默认上传项目，不读取凭证文件。" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ruiflow-team.github.io/harness-local/" />
   <meta property="og:image" content="https://ruiflow-team.github.io/harness-local/assets/social/og-harness-local.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Harness Local v0.24.1 Beta" />
+  <meta name="twitter:title" content="Harness Local v0.24.2 Beta" />
   <meta name="twitter:description" content="本地优先的 AI 项目体检工具。" />
   <meta name="twitter:image" content="https://ruiflow-team.github.io/harness-local/assets/social/og-harness-local.png" />
   <meta name="theme-color" content="#07111F" />
@@ -36,18 +36,18 @@
 <body>
   <header class="wrap nav">
     <a class="brand" href="#"><img src="assets/harness-local-mark.svg" alt="Harness Local 标识"/><span>Harness Local</span></a>
-    <nav class="navlinks"><a href="#install">下载安装</a><a href="#safety">安全边界</a><a href="#feedback">参与内测</a><a href="https://github.com/ruiflow-team/harness-local">GitHub</a></nav>
+    <nav class="navlinks"><a href="#install">下载安装</a><a href="#safety">安全边界</a><a href="#feedback">反馈入口</a><a href="https://github.com/ruiflow-team/harness-local">GitHub</a></nav>
   </header>
 
   <main class="wrap">
     <section class="hero">
       <div>
-        <span class="eyebrow"><span class="dot"></span> v0.24.1 Beta · 招募种子用户</span>
+        <span class="eyebrow"><span class="dot"></span> v0.24.2 Beta · 中文本地面板</span>
         <h1><span class="grad">本地 AI</span><br/>项目体检工具</h1>
         <p class="lead">Harness Local 帮你在电脑本地启动一个 AI 项目工作台，先做安全边界、启动状态和交付准备度检查。</p>
-        <p class="sub">默认绑定 127.0.0.1，不默认上传项目，不读取凭证文件。当前适合愿意试用 3 分钟并反馈卡点的早期用户。</p>
+        <p class="sub">默认绑定 127.0.0.1，不默认上传项目，不读取凭证文件。当前适合开发者先在本机做项目体检，再决定下一步。</p>
         <div class="cta">
-          <a class="btn primary" href="https://github.com/ruiflow-team/harness-local/releases/download/v0.24.1-beta/harness-local-v0.24.1-beta.zip">下载 v0.24.1 Beta</a>
+          <a class="btn primary" href="https://github.com/ruiflow-team/harness-local/releases/download/v0.24.2-beta/harness-local-v0.24.2-beta.zip">下载 v0.24.2 Beta</a>
           <a class="btn ghost" href="docs/CONFIGURATION.md">查看配置说明</a>
           <a class="btn ghost" href="https://github.com/ruiflow-team/harness-local/issues/new/choose">提交试用反馈</a>
         </div>
@@ -71,16 +71,16 @@ cd harness-local-v0.24-beta
       <p class="section-lead">可以一键安装，也可以手动下载 GitHub Release 包。</p>
       <div class="grid">
         <div class="card"><div class="icon">1</div><h3>一键安装</h3><pre class="code">curl -L https://ruiflow-team.github.io/harness-local/install.sh | sh</pre></div>
-        <div class="card"><div class="icon">2</div><h3>手动启动</h3><pre class="code">unzip harness-local-v0.24.1-beta.zip
+        <div class="card"><div class="icon">2</div><h3>手动启动</h3><pre class="code">unzip harness-local-v0.24.2-beta.zip
 cd harness-local-v0.24-beta
 ./harness serve</pre></div>
-        <div class="card"><div class="icon">3</div><h3>校验下载包</h3><p class="hash">6a2ba60462ab50a4130920075c35dc3dcd0760246899caa112ac807f31cbb2d0</p><pre class="code">shasum -a 256 harness-local-v0.24.1-beta.zip</pre></div>
+        <div class="card"><div class="icon">3</div><h3>校验下载包</h3><p class="hash">e609a51ac024288967fbbbb14dd4107148bcf2eebadc9c293c4491c2bbf10ea9</p><pre class="code">shasum -a 256 harness-local-v0.24.2-beta.zip</pre></div>
       </div>
     </section>
 
     <section id="safety">
       <h2 class="section-title">安全边界先说清楚</h2>
-      <p class="section-lead">这是 beta 内测工具，不是正式云 SaaS，也不承诺自动修好所有项目。</p>
+      <p class="section-lead">这是 Beta 工具，不是正式云 SaaS，也不承诺自动修好所有项目。</p>
       <div class="grid">
         <div class="card"><div class="icon">✓</div><h3>默认只在本机打开</h3><p>Web 界面默认绑定 127.0.0.1，不主动暴露到公网。</p></div>
         <div class="card"><div class="icon">✓</div><h3>不默认上传项目</h3><p>当前 beta 以本地检查为主，不默认把项目发到云端。</p></div>
@@ -89,16 +89,16 @@ cd harness-local-v0.24-beta
     </section>
 
     <section>
-      <h2 class="section-title">适合谁先试？</h2>
+      <h2 class="section-title">适合哪些场景？</h2>
       <div class="steps">
         <div class="step"><div><b>开发者 / 独立开发者</b><br/><span class="muted">想先给项目做一次本地体检，再决定怎么接 AI 工作流。</span></div></div>
         <div class="step"><div><b>创业者 / 产品负责人</b><br/><span class="muted">想验证 AI 辅助项目执行能不能变得可检查、可复盘。</span></div></div>
-        <div class="step"><div><b>愿意反馈的早期用户</b><br/><span class="muted">愿意花 3 分钟安装，告诉我们 v0.25 最该先补什么。</span></div></div>
+        <div class="step"><div><b>AI 接手前的本地检查</b><br/><span class="muted">先看项目状态、边界和报告，再决定是否继续交给 AI 执行。</span></div></div>
       </div>
     </section>
 
-    <section id="feedback"><div class="card"><h2 class="section-title">参与第一批种子测试</h2><p class="section-lead">当前目标：先收集 10 位真实用户反馈，再决定 v0.25 优先级。</p><div class="cta"><a class="btn primary" href="https://github.com/ruiflow-team/harness-local/issues/new/choose">提交试用反馈</a><a class="btn ghost" href="https://github.com/ruiflow-team/harness-local">查看 GitHub 仓库</a><a class="btn ghost" href="docs/INSTALL-v0.24.1.md">阅读安装说明</a><a class="btn ghost" href="assets/social/douyin-cover-harness-local.png">抖音封面图</a></div></div></section>
+    <section id="feedback"><div class="card"><h2 class="section-title">反馈入口</h2><p class="section-lead">如果安装、启动或本地检查遇到问题，可以在 GitHub Issue 里提交复现信息。请不要粘贴密钥、私有源码或客户数据。</p><div class="cta"><a class="btn primary" href="https://github.com/ruiflow-team/harness-local/issues/new/choose">提交反馈</a><a class="btn ghost" href="https://github.com/ruiflow-team/harness-local">查看 GitHub 仓库</a><a class="btn ghost" href="docs/INSTALL.md">阅读安装说明</a></div></div></section>
   </main>
-  <footer class="wrap footer"><div class="brand"><img src="assets/harness-local-mark.svg" alt="Harness Local 标识"/><span>Harness Local</span></div><p>Beta 内测工具。请勿在公开 issue 中粘贴密钥、私有源码或客户数据。</p></footer>
+  <footer class="wrap footer"><div class="brand"><img src="assets/harness-local-mark.svg" alt="Harness Local 标识"/><span>Harness Local</span></div><p>Beta 工具。请勿在公开 issue 中粘贴密钥、私有源码或客户数据。</p></footer>
 </body>
 </html>

@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Verify bundled package checksum
         run: |
-          cd releases/v0.24.1
+          cd releases/v0.24.2
           sha256sum -c SHA256SUMS
       - name: Verify public docs have expected files
         run: |
@@ -24,7 +24,7 @@ jobs:
       - name: Extract and smoke test package
         run: |
           tmp="$(mktemp -d)"
-          unzip -q releases/v0.24.1/harness-local-v0.24.1-beta.zip -d "$tmp"
+          unzip -q releases/v0.24.2/harness-local-v0.24.2-beta.zip -d "$tmp"
           cd "$tmp/harness-local-v0.24-beta"
           HARNESS_DATA_DIR="$tmp/data" ./harness smoke-empty
           HARNESS_DATA_DIR="$tmp/data" ./harness doctor

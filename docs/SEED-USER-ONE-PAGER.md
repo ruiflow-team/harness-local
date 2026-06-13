@@ -1,4 +1,4 @@
-# Harness Local v0.24 Beta｜种子用户一页说明
+# Harness Local v0.24 Beta｜产品功能一页说明
 
 时间：2026-06-13 GMT+8  
 状态：小范围 Beta 试用；未公开发布
@@ -35,19 +35,19 @@ Harness Local 是一个本地优先的 AI Agent 执行工作台。
 拿到文件：
 
 ```text
-harness-local-v0.24.1-beta.zip
+harness-local-v0.24.2-beta.zip
 ```
 
 SHA256：
 
 ```text
-6a2ba60462ab50a4130920075c35dc3dcd0760246899caa112ac807f31cbb2d0
+e609a51ac024288967fbbbb14dd4107148bcf2eebadc9c293c4491c2bbf10ea9
 ```
 
 解压并启动：
 
 ```bash
-unzip harness-local-v0.24.1-beta.zip
+unzip harness-local-v0.24.2-beta.zip
 cd harness-local-v0.24-beta
 ./harness serve
 ```

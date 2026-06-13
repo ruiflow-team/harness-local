@@ -1,69 +1,23 @@
-# 抖音短视频口播｜Harness Local v0.24.1 Beta
+# 抖音短视频脚本｜Harness Local v0.24.2 产品功能介绍
 
-## 版本 A｜30 秒直接版
+## 标题
 
-画面 1：电脑桌面 + GitHub 页面
+本地 AI 项目体检工具：Harness Local
 
-口播：
-“我们做了一个本地 AI 项目体检工具，叫 Harness Local。现在是 beta，先开放 10 个种子用户测试。”
+## 30 秒结构
 
-画面 2：终端执行安装
+0-3 秒：AI 接手项目前，先别急着让它改代码。
 
-字幕/命令：
-```bash
-curl -L https://ruiflow-team.github.io/harness-local/install.sh | sh
-```
+3-8 秒：Harness Local 默认跑在本机 `127.0.0.1`，先做本地项目体检。
 
-口播：
-“它默认在本地跑，不默认上传你的项目，也不读取你的凭证文件。”
+8-15 秒：添加 workspace，查看项目结构、README 摘要和 git 状态。
 
-画面 3：启动服务
+15-22 秒：输入目标后拆成 task steps，再运行 doctor / safe audit。
 
-字幕/命令：
-```bash
-cd harness-local-v0.24-beta
-./harness serve
-```
+22-28 秒：结果用 PASS / WARN 和 Markdown 报告展示。
 
-口播：
-“启动后打开 127.0.0.1，就能做基础自检。”
+28-30 秒：先本地体检，再决定下一步。
 
-画面 4：浏览器页面 + doctor/smoke 输出
+## 禁用口径
 
-口播：
-“现在还不是正式商业版，我们想先找真实用户验证：能不能装起来、看不看得懂、下一版该补什么。”
-
-画面 5：GitHub / Pages 地址
-
-口播：
-“想试的可以去 GitHub 搜 ruiflow-team / harness-local，或者看评论区链接。”
-
-## 版本 B｜痛点版
-
-开头：
-“很多 AI 工具一上来就要你上传项目、填 API Key、开一堆权限。我想先反过来做一个本地优先的小工具。”
-
-中段：
-“Harness Local 默认绑定 127.0.0.1，不默认上传项目，不读取凭证文件。先帮你做项目接入前的基础体检。”
-
-结尾：
-“现在是 v0.24.1 beta，只招 10 个种子用户。你可以下载安装，跑 smoke 和 doctor，然后把卡点反馈给我们。”
-
-## 置顶评论
-
-Harness Local v0.24.1 Beta：
-https://ruiflow-team.github.io/harness-local/
-
-GitHub：
-https://github.com/ruiflow-team/harness-local
-
-反馈入口：
-https://github.com/ruiflow-team/harness-local/issues/new/choose
-
-
-## 封面图
-
-建议使用：`assets/social/douyin-cover-harness-local.png`
-
-线上地址：
-https://ruiflow-team.github.io/harness-local/assets/social/douyin-cover-harness-local.png
+不要写任何转化型邀约话术；只讲产品功能和使用边界。
