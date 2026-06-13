@@ -92,3 +92,11 @@ This beta does **not** promise:
 - Default code modification
 - Default destructive command execution
 - Enterprise multi-user SaaS features
+
+## Feedback
+
+Seed user feedback is collected through GitHub Issues:
+
+<https://github.com/ruiflow-team/harness-local/issues/new/choose>
+
+Please do not paste secrets, API keys, private source code, or customer data.
