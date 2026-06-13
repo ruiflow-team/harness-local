@@ -1,121 +1,94 @@
 [![Release](https://img.shields.io/badge/release-v0.24.1--beta-2ECFB0)](https://github.com/ruiflow-team/harness-local/releases/tag/v0.24.1-beta)
 [![Pages](https://img.shields.io/badge/pages-live-5AA9D6)](https://ruiflow-team.github.io/harness-local/)
 [![Public Check](https://github.com/ruiflow-team/harness-local/actions/workflows/public-check.yml/badge.svg)](https://github.com/ruiflow-team/harness-local/actions/workflows/public-check.yml)
-[![Local First](https://img.shields.io/badge/default-127.0.0.1-667EEA)](#safety-defaults)
+[![Local First](https://img.shields.io/badge/default-127.0.0.1-667EEA)](#安全边界)
 
-# Harness Local v0.24 Beta
+# Harness Local
 
-Harness Local is a local-first AI Agent execution workbench.
+**本地 AI 项目体检工具｜v0.24.1 Beta**
 
-一句话：在你的电脑上，把 AI 从聊天变成可验证的任务流。
+Harness Local 帮你在电脑本地启动一个轻量 AI 项目工作台，先做项目接入前的安全边界、启动状态和交付准备度检查。
 
-## Download
+当前版本面向中国种子用户测试：默认中文说明、默认本地运行、默认绑定 `127.0.0.1`。
 
-- Package: `harness-local-v0.24.1-beta.zip`
-- SHA256: `6a2ba60462ab50a4130920075c35dc3dcd0760246899caa112ac807f31cbb2d0`
+官网说明页：<https://ruiflow-team.github.io/harness-local/>
 
-GitHub Release download is recommended after the `v0.24.1-beta` release is created.
+## 快速开始
 
-
-## One-line Installer
+一键安装：
 
 ```bash
 curl -L https://ruiflow-team.github.io/harness-local/install.sh | sh
 ```
 
-Install into a custom directory:
+手动下载：
 
 ```bash
-curl -L https://ruiflow-team.github.io/harness-local/install.sh | HARNESS_INSTALL_DIR=/tmp sh
-```
+curl -L -o harness-local-v0.24.1-beta.zip \
+  https://github.com/ruiflow-team/harness-local/releases/download/v0.24.1-beta/harness-local-v0.24.1-beta.zip
 
-## Quick Start
-
-```bash
+shasum -a 256 harness-local-v0.24.1-beta.zip
 unzip harness-local-v0.24.1-beta.zip
 cd harness-local-v0.24-beta
 ./harness serve
 ```
 
-Open:
+浏览器打开：
 
 ```text
 http://127.0.0.1:8788
 ```
 
-If port 8788 is occupied:
+自检：
+
+```bash
+./harness smoke-empty
+./harness doctor
+```
+
+## 下载校验
+
+- Release：<https://github.com/ruiflow-team/harness-local/releases/tag/v0.24.1-beta>
+- Package：`harness-local-v0.24.1-beta.zip`
+- SHA256：`6a2ba60462ab50a4130920075c35dc3dcd0760246899caa112ac807f31cbb2d0`
+
+## 配置
+
+修改端口：
 
 ```bash
 HARNESS_PORT=8789 ./harness serve
 ```
 
-Use an isolated data directory:
+指定隔离数据目录：
 
 ```bash
 HARNESS_DATA_DIR=/tmp/harness-local-data ./harness serve
 ```
 
-Smoke test:
+更多配置：[`docs/CONFIGURATION.md`](docs/CONFIGURATION.md)
 
-```bash
-./harness smoke-empty
-```
+## 安全边界
 
-Expected:
+当前 beta 默认策略：
 
-```json
-{
-  "status": "PASS",
-  "version": "0.24",
-  "empty_workspaces": 0,
-  "empty_tasks": 0,
-  "release_readiness_status": "PASS"
-}
-```
+- 默认绑定 `127.0.0.1`
+- 不默认上传项目
+- 不读取凭证文件
+- 不保存明文 API Key
+- 不执行破坏性命令
+- optional plugins 默认关闭
 
-## Safety Defaults
+请不要在公开 issue 中粘贴密钥、私有源码或客户数据。
 
-- Binds to `127.0.0.1` by default.
-- Does not upload project files by default.
-- Does not read credential files.
-- Does not store plaintext API keys.
-- Does not execute destructive commands.
-- Optional demo plugins are disabled by default.
+## 反馈
 
-## Docs
+我们正在收集第一批真实用户反馈，用来决定 v0.25 优先级。
 
-- [Install Guide](docs/INSTALL.md)
-- [Seed User One Pager](docs/SEED-USER-ONE-PAGER.md)
+提交反馈：<https://github.com/ruiflow-team/harness-local/issues/new/choose>
 
-## Current Beta Boundary
+## 视觉资产
 
-This beta does **not** promise:
-
-- 100% automatic project completion
-- Replacing engineers
-- Default cloud processing of local projects
-- Default code modification
-- Default destructive command execution
-- Enterprise multi-user SaaS features
-
-
-
-## Visual Assets
-
-- App mark: [`assets/harness-local-mark.svg`](assets/harness-local-mark.svg)
-- OpenGraph image: [`assets/social/og-harness-local.png`](assets/social/og-harness-local.png)
-- Douyin cover: [`assets/social/douyin-cover-harness-local.png`](assets/social/douyin-cover-harness-local.png)
-
-## Seed User Launch Materials
-
-- WeChat seed-user post draft: [`docs/marketing/WECHAT-SEED-USER-POST-v0.24.1.md`](docs/marketing/WECHAT-SEED-USER-POST-v0.24.1.md)
-- Douyin short-video script: [`docs/marketing/DOUYIN-SHORT-SCRIPT-v0.24.1.md`](docs/marketing/DOUYIN-SHORT-SCRIPT-v0.24.1.md)
-- Seed-user DM templates: [`docs/marketing/SEED-USER-DM-TEMPLATES-v0.24.1.md`](docs/marketing/SEED-USER-DM-TEMPLATES-v0.24.1.md)
-
-## Feedback
-
-Seed user feedback is collected through GitHub Issues:
-
-<https://github.com/ruiflow-team/harness-local/issues/new/choose>
-
-Please do not paste secrets, API keys, private source code, or customer data.
+- App 标识：[`assets/harness-local-mark.svg`](assets/harness-local-mark.svg)
+- 微信/社媒横图：[`assets/social/og-harness-local.png`](assets/social/og-harness-local.png)
+- 抖音封面图：[`assets/social/douyin-cover-harness-local.png`](assets/social/douyin-cover-harness-local.png)
