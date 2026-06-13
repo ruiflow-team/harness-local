@@ -1,0 +1,17 @@
+{
+  "name": "Harness Local",
+  "short_name": "Harness",
+  "description": "Local-first AI Agent execution workbench for safe project checks.",
+  "start_url": "/harness-local/",
+  "display": "standalone",
+  "background_color": "#07111F",
+  "theme_color": "#5AA9D6",
+  "icons": [
+    {
+      "src": "assets/harness-local-mark.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
