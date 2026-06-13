@@ -59,3 +59,11 @@ https://github.com/ruiflow-team/harness-local
 
 反馈入口：
 https://github.com/ruiflow-team/harness-local/issues/new/choose
+
+
+## 封面图
+
+建议使用：`assets/social/douyin-cover-harness-local.png`
+
+线上地址：
+https://ruiflow-team.github.io/harness-local/assets/social/douyin-cover-harness-local.png
