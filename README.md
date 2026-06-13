@@ -93,6 +93,13 @@ This beta does **not** promise:
 - Default destructive command execution
 - Enterprise multi-user SaaS features
 
+
+## Seed User Launch Materials
+
+- WeChat seed-user post draft: [`docs/marketing/WECHAT-SEED-USER-POST-v0.24.1.md`](docs/marketing/WECHAT-SEED-USER-POST-v0.24.1.md)
+- Douyin short-video script: [`docs/marketing/DOUYIN-SHORT-SCRIPT-v0.24.1.md`](docs/marketing/DOUYIN-SHORT-SCRIPT-v0.24.1.md)
+- Seed-user DM templates: [`docs/marketing/SEED-USER-DM-TEMPLATES-v0.24.1.md`](docs/marketing/SEED-USER-DM-TEMPLATES-v0.24.1.md)
+
 ## Feedback
 
 Seed user feedback is collected through GitHub Issues:
