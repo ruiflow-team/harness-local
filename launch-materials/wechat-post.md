@@ -1,4 +1,4 @@
-# 公众号文章｜Harness Local v0.24.3 产品功能介绍
+# 公众号文章｜Harness Local v0.24.4 产品功能介绍
 
 ## 标题
 

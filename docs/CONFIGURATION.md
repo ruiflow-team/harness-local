@@ -56,11 +56,11 @@ Expected status: `PASS`.
 From the extracted directory:
 
 ```bash
-shasum -a 256 ../harness-local-v0.24.3-beta.zip
+shasum -a 256 ../harness-local-v0.24.4-beta.zip
 ```
 
 Expected SHA256:
 
 ```text
-7e4da385e3ce652d70ad3e85f4eb9e121727a49fde87e69521313ee6ce6d623b
+52fd5649a0c49d76472616ca381fd4a905a8e86eb4164ef5a1f1c1f9241560b5
 ```
