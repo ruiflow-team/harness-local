@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Harness Local v0.24 Beta</title>
+  <style>
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;margin:0;background:#0b1020;color:#eef3ff;line-height:1.6}
+    main{max-width:920px;margin:0 auto;padding:56px 20px}
+    .card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:24px;margin:18px 0}
+    h1{font-size:44px;line-height:1.1;margin:0 0 12px} h2{margin-top:0}.muted{color:#aeb9d4}
+    code,pre{background:rgba(0,0,0,.35);border-radius:8px} code{padding:2px 6px} pre{padding:14px;overflow:auto}
+    a{color:#7dd3fc}.btn{display:inline-block;background:#5aa9d6;color:#06111f;text-decoration:none;padding:12px 16px;border-radius:10px;font-weight:700;margin:6px 8px 6px 0}
+    .hash{word-break:break-all;font-size:13px;color:#cbd5e1}
+  </style>
+</head>
+<body><main>
+  <h1>Harness Local v0.24 Beta</h1>
+  <p class="muted">Local-first AI Agent execution workbench. 在你的电脑上，把 AI 从聊天变成可验证的任务流。</p>
+  <p>
+    <a class="btn" href="releases/v0.24/harness-local-v0.24-beta.zip">Download ZIP</a>
+    <a class="btn" href="docs/INSTALL.md">Install Guide</a>
+    <a class="btn" href="docs/CONFIGURATION.md">Configuration</a>
+  </p>
+  <section class="card"><h2>Quick Start</h2><pre>unzip harness-local-v0.24-beta.zip
+cd harness-local-v0.24-beta
+./harness serve</pre><p>Open <code>http://127.0.0.1:8788</code></p></section>
+  <section class="card"><h2>Verify</h2><p>SHA256:</p><p class="hash"><code>681e070a7755140c2639833b1841b11933dd4b35e6b094785677fd1a6cfa37bc</code></p><pre>shasum -a 256 harness-local-v0.24-beta.zip</pre></section>
+  <section class="card"><h2>Configuration</h2><pre>HARNESS_PORT=8789 ./harness serve
+HARNESS_DATA_DIR=/tmp/harness-local-data ./harness serve
+./harness smoke-empty</pre></section>
+  <section class="card"><h2>Safety Defaults</h2><ul><li>Default bind: 127.0.0.1</li><li>No default cloud upload</li><li>No credential file read</li><li>No destructive command execution</li><li>Optional plugins disabled by default</li></ul></section>
+</main></body></html>
