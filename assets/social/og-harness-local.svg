@@ -1,0 +1,36 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#07111F"/>
+  <circle cx="220" cy="90" r="260" fill="#667EEA" opacity="0.45"/>
+  <circle cx="1020" cy="65" r="250" fill="#2ECFB0" opacity="0.28"/>
+  <circle cx="780" cy="610" r="330" fill="#5AA9D6" opacity="0.22"/>
+  <g opacity="0.12">
+    <path d="M0 120H1200M0 240H1200M0 360H1200M0 480H1200" stroke="white"/>
+    <path d="M120 0V630M240 0V630M360 0V630M480 0V630M600 0V630M720 0V630M840 0V630M960 0V630M1080 0V630" stroke="white"/>
+  </g>
+  <rect x="72" y="72" width="1056" height="486" rx="44" fill="white" opacity="0.075" stroke="white" stroke-opacity="0.14"/>
+  <g transform="translate(94 100) scale(.55)">
+    <rect width="512" height="512" rx="116" fill="#07111F"/>
+    <rect x="28" y="28" width="456" height="456" rx="96" fill="url(#bg)" opacity="0.95"/>
+    <path d="M256 84L382 132V230C382 312 329 383 256 408C183 383 130 312 130 230V132L256 84Z" fill="#081527" stroke="url(#stroke)" stroke-width="18"/>
+    <path d="M190 174V338" stroke="#EAF6FF" stroke-width="34" stroke-linecap="round"/>
+    <path d="M322 174V338" stroke="#EAF6FF" stroke-width="34" stroke-linecap="round"/>
+    <path d="M202 256H310" stroke="#EAF6FF" stroke-width="34" stroke-linecap="round"/>
+    <path d="M157 386C205 432 307 432 355 386" stroke="#2ECFB0" stroke-width="18" stroke-linecap="round" opacity="0.9"/>
+    <circle cx="378" cy="143" r="28" fill="#7DD3FC"/>
+  </g>
+  <text x="410" y="170" fill="#ECF7FF" font-family="Inter, Arial, sans-serif" font-size="74" font-weight="850" letter-spacing="-4">Harness Local</text>
+  <text x="414" y="232" fill="#7DD3FC" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="750">v0.24.1 Beta · Local-first AI Project Workbench</text>
+  <text x="414" y="310" fill="#C7D7EA" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="650">Run safe local AI Agent project checks</text>
+  <text x="414" y="358" fill="#C7D7EA" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="650">without default cloud upload.</text>
+  <g transform="translate(414 420)">
+    <rect width="220" height="54" rx="18" fill="#2ECFB0"/>
+    <text x="28" y="36" fill="#03111D" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="850">Download Beta</text>
+    <rect x="242" width="275" height="54" rx="18" fill="white" opacity="0.09" stroke="white" stroke-opacity="0.16"/>
+    <text x="270" y="36" fill="#ECF7FF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="750">127.0.0.1 by default</text>
+  </g>
+  <text x="414" y="520" fill="#9FB3CC" font-family="Inter, Arial, sans-serif" font-size="24">ruiflow-team.github.io/harness-local</text>
+  <defs>
+    <linearGradient id="bg" x1="64" y1="48" x2="448" y2="464" gradientUnits="userSpaceOnUse"><stop stop-color="#667EEA"/><stop offset="0.52" stop-color="#5AA9D6"/><stop offset="1" stop-color="#2ECFB0"/></linearGradient>
+    <linearGradient id="stroke" x1="130" y1="84" x2="382" y2="408" gradientUnits="userSpaceOnUse"><stop stop-color="#EAF6FF"/><stop offset="1" stop-color="#7DD3FC"/></linearGradient>
+  </defs>
+</svg>
