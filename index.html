@@ -22,10 +22,11 @@
     <a class="btn" href="docs/INSTALL.md">Install Guide</a>
     <a class="btn" href="docs/CONFIGURATION.md">Configuration</a>
   </p>
+  <section class="card"><h2>One-line Installer</h2><pre>curl -L https://ruiflow-team.github.io/harness-local/install.sh | sh</pre></section>
   <section class="card"><h2>Quick Start</h2><pre>unzip harness-local-v0.24-beta.zip
 cd harness-local-v0.24-beta
 ./harness serve</pre><p>Open <code>http://127.0.0.1:8788</code></p></section>
-  <section class="card"><h2>Verify</h2><p>SHA256:</p><p class="hash"><code>681e070a7755140c2639833b1841b11933dd4b35e6b094785677fd1a6cfa37bc</code></p><pre>shasum -a 256 harness-local-v0.24-beta.zip</pre></section>
+  <section class="card"><h2>Verify</h2><p>SHA256:</p><p class="hash"><code>a1e5ffc2eccb5dd836a38f82eb75bec831c29e8407e756ade143ab4ea1e83805</code></p><pre>shasum -a 256 harness-local-v0.24-beta.zip</pre></section>
   <section class="card"><h2>Configuration</h2><pre>HARNESS_PORT=8789 ./harness serve
 HARNESS_DATA_DIR=/tmp/harness-local-data ./harness serve
 ./harness smoke-empty</pre></section>
