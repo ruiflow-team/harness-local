@@ -6,10 +6,10 @@ Harness Local is a local-first AI Agent execution workbench.
 
 ## Download
 
-- Package: `harness-local-v0.24-beta.zip`
+- Package: `harness-local-v0.24.1-beta.zip`
 - SHA256: `6a2ba60462ab50a4130920075c35dc3dcd0760246899caa112ac807f31cbb2d0`
 
-GitHub Release download is recommended after the `v0.24-beta` release is created.
+GitHub Release download is recommended after the `v0.24.1-beta` release is created.
 
 
 ## One-line Installer
@@ -27,7 +27,7 @@ curl -L https://ruiflow-team.github.io/harness-local/install.sh | HARNESS_INSTAL
 ## Quick Start
 
 ```bash
-unzip harness-local-v0.24-beta.zip
+unzip harness-local-v0.24.1-beta.zip
 cd harness-local-v0.24-beta
 ./harness serve
 ```
