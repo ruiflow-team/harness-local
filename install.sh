@@ -3,7 +3,7 @@ set -eu
 
 VERSION="v0.24-beta"
 FILE="harness-local-v0.24-beta.zip"
-SHA256="a1e5ffc2eccb5dd836a38f82eb75bec831c29e8407e756ade143ab4ea1e83805"
+SHA256="6a2ba60462ab50a4130920075c35dc3dcd0760246899caa112ac807f31cbb2d0"
 BASE_URL="https://github.com/ruiflow-team/harness-local/releases/download/${VERSION}"
 INSTALL_DIR="${HARNESS_INSTALL_DIR:-$PWD}"
 
