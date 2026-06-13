@@ -62,5 +62,5 @@ shasum -a 256 ../harness-local-v0.24-beta.zip
 Expected SHA256:
 
 ```text
-a1e5ffc2eccb5dd836a38f82eb75bec831c29e8407e756ade143ab4ea1e83805
+6a2ba60462ab50a4130920075c35dc3dcd0760246899caa112ac807f31cbb2d0
 ```
