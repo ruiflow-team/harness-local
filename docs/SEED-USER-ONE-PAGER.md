@@ -41,7 +41,7 @@ harness-local-v0.24-beta.zip
 SHA256：
 
 ```text
-681e070a7755140c2639833b1841b11933dd4b35e6b094785677fd1a6cfa37bc
+a1e5ffc2eccb5dd836a38f82eb75bec831c29e8407e756ade143ab4ea1e83805
 ```
 
 解压并启动：
