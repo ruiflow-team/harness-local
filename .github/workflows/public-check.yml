@@ -1,0 +1,30 @@
+name: Public package check
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  public-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify bundled package checksum
+        run: |
+          cd releases/v0.24
+          sha256sum -c SHA256SUMS
+      - name: Verify public docs have expected files
+        run: |
+          test -f index.html
+          test -f README.md
+          test -f docs/INSTALL.md
+          test -f docs/CONFIGURATION.md
+          test -f install.sh
+      - name: Extract and smoke test package
+        run: |
+          tmp="$(mktemp -d)"
+          unzip -q releases/v0.24/harness-local-v0.24-beta.zip -d "$tmp"
+          cd "$tmp/harness-local-v0.24-beta"
+          HARNESS_DATA_DIR="$tmp/data" ./harness smoke-empty
+          HARNESS_DATA_DIR="$tmp/data" ./harness doctor
