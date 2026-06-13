@@ -35,20 +35,20 @@ Harness Local 是一个本地优先的 AI Agent 执行工作台。
 拿到文件：
 
 ```text
-harness-local-v0.24.2-beta.zip
+harness-local-v0.24.3-beta.zip
 ```
 
 SHA256：
 
 ```text
-e609a51ac024288967fbbbb14dd4107148bcf2eebadc9c293c4491c2bbf10ea9
+7e4da385e3ce652d70ad3e85f4eb9e121727a49fde87e69521313ee6ce6d623b
 ```
 
 解压并启动：
 
 ```bash
-unzip harness-local-v0.24.2-beta.zip
-cd harness-local-v0.24-beta
+unzip harness-local-v0.24.3-beta.zip
+cd harness-local-v0.24.3-beta
 ./harness serve
 ```
 
