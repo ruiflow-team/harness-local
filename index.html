@@ -3,32 +3,114 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Harness Local v0.24 Beta</title>
+  <title>Harness Local v0.24.1 Beta｜Local-first AI Project Workbench</title>
+  <meta name="description" content="Harness Local is a local-first AI Agent execution workbench for safe project checks, beta seed-user testing, and verifiable local workflows." />
+  <meta property="og:title" content="Harness Local v0.24.1 Beta" />
+  <meta property="og:description" content="Local-first AI Agent execution workbench. Safe beta for seed users." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#07111F" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="site.webmanifest" />
   <style>
-    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;margin:0;background:#0b1020;color:#eef3ff;line-height:1.6}
-    main{max-width:920px;margin:0 auto;padding:56px 20px}
-    .card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:24px;margin:18px 0}
-    h1{font-size:44px;line-height:1.1;margin:0 0 12px} h2{margin-top:0}.muted{color:#aeb9d4}
-    code,pre{background:rgba(0,0,0,.35);border-radius:8px} code{padding:2px 6px} pre{padding:14px;overflow:auto}
-    a{color:#7dd3fc}.btn{display:inline-block;background:#5aa9d6;color:#06111f;text-decoration:none;padding:12px 16px;border-radius:10px;font-weight:700;margin:6px 8px 6px 0}
-    .hash{word-break:break-all;font-size:13px;color:#cbd5e1}
+    :root{
+      --bg:#07111F;--panel:#0D1A2E;--panel2:#101F35;--text:#ECF7FF;--muted:#9FB3CC;
+      --line:rgba(255,255,255,.12);--cyan:#7DD3FC;--blue:#5AA9D6;--green:#2ECFB0;--purple:#667EEA;
+      --shadow:0 24px 80px rgba(0,0,0,.38);--radius:24px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:-20%;z-index:-2;background:radial-gradient(circle at 20% 15%,rgba(102,126,234,.45),transparent 30%),radial-gradient(circle at 80% 5%,rgba(46,207,176,.28),transparent 28%),radial-gradient(circle at 65% 75%,rgba(90,169,214,.22),transparent 34%),#07111F}
+    body:after{content:"";position:fixed;inset:0;z-index:-1;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:56px 56px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.7),transparent 75%)}
+    a{color:var(--cyan);text-decoration:none} a:hover{text-decoration:underline}
+    .wrap{width:min(1160px,calc(100% - 40px));margin:0 auto}.nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.02em}.brand img{width:42px;height:42px;border-radius:12px;box-shadow:0 10px 32px rgba(46,207,176,.25)}
+    .navlinks{display:flex;gap:20px;align-items:center;color:var(--muted);font-size:14px}.navlinks a{color:var(--muted)}
+    .hero{padding:62px 0 54px;display:grid;grid-template-columns:1.1fr .9fr;gap:46px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid rgba(125,211,252,.25);background:rgba(125,211,252,.08);border-radius:999px;color:#CFF2FF;font-size:13px;font-weight:700}.dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 18px var(--green)}
+    h1{font-size:clamp(42px,7vw,76px);line-height:.96;margin:22px 0 18px;letter-spacing:-.07em}.grad{background:linear-gradient(135deg,#fff 0%,#BDEBFF 35%,#8AF2DB 100%);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{font-size:20px;color:#C7D7EA;max-width:680px;margin:0 0 26px}.cn{color:#AFC3DC;font-size:17px;margin-top:-10px}
+    .cta{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 18px;border-radius:14px;font-weight:800;border:1px solid transparent;box-shadow:0 12px 34px rgba(0,0,0,.22)}.btn.primary{background:linear-gradient(135deg,var(--purple),var(--blue),var(--green));color:#03111D}.btn.ghost{background:rgba(255,255,255,.07);border-color:var(--line);color:var(--text)}.btn:hover{text-decoration:none;transform:translateY(-1px)}
+    .meta{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:26px}.pill{border:1px solid var(--line);background:rgba(255,255,255,.055);border-radius:16px;padding:12px}.pill b{display:block;color:#fff}.pill span{font-size:13px;color:var(--muted)}
+    .product{position:relative;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.11),rgba(255,255,255,.045));border-radius:32px;padding:20px;box-shadow:var(--shadow)}.window{overflow:hidden;border-radius:22px;border:1px solid rgba(255,255,255,.14);background:#07111F}.bar{display:flex;gap:7px;padding:13px;background:rgba(255,255,255,.08)}.bar i{width:11px;height:11px;border-radius:50%;background:#F87171}.bar i:nth-child(2){background:#FBBF24}.bar i:nth-child(3){background:#34D399}.screen{padding:22px}.status{display:flex;align-items:center;justify-content:space-between;border:1px solid rgba(46,207,176,.28);background:rgba(46,207,176,.08);border-radius:18px;padding:16px;margin-bottom:14px}.check{font-weight:900;color:#9FF9E4}.code{background:#020817;border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:16px;overflow:auto;color:#D6E8FF;font-family:"SFMono-Regular",Consolas,monospace;font-size:13px}.hash{word-break:break-all;color:#B9C9DD;font-size:12px}
+    section{padding:36px 0}.section-title{font-size:34px;letter-spacing:-.04em;margin:0 0 12px}.section-lead{color:var(--muted);margin:0 0 22px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{border:1px solid var(--line);background:rgba(255,255,255,.065);border-radius:var(--radius);padding:22px}.card h3{margin:0 0 8px;font-size:19px}.card p,.card li{color:#AEC2D9}.icon{width:38px;height:38px;border-radius:13px;background:linear-gradient(135deg,var(--purple),var(--green));display:grid;place-items:center;color:#06111F;font-weight:900;margin-bottom:14px}.steps{counter-reset:s;display:grid;gap:12px}.step{counter-increment:s;display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:start;border:1px solid var(--line);background:rgba(255,255,255,.055);border-radius:18px;padding:16px}.step:before{content:counter(s);width:38px;height:38px;border-radius:12px;background:rgba(125,211,252,.14);display:grid;place-items:center;color:var(--cyan);font-weight:900}.footer{padding:42px 0 60px;color:var(--muted);border-top:1px solid var(--line);margin-top:30px}.footer .brand{color:var(--text)}
+    @media(max-width:880px){.hero{grid-template-columns:1fr;padding-top:32px}.navlinks{display:none}.grid{grid-template-columns:1fr}.meta{grid-template-columns:1fr}h1{letter-spacing:-.045em}}
   </style>
 </head>
-<body><main>
-  <h1>Harness Local v0.24 Beta</h1>
-  <p class="muted">Local-first AI Agent execution workbench. 在你的电脑上，把 AI 从聊天变成可验证的任务流。</p>
-  <p>
-    <a class="btn" href="releases/v0.24.1/harness-local-v0.24.1-beta.zip">Download ZIP</a>
-    <a class="btn" href="docs/INSTALL.md">Install Guide</a>
-    <a class="btn" href="docs/CONFIGURATION.md">Configuration</a>
-  </p>
-  <section class="card"><h2>One-line Installer</h2><pre>curl -L https://ruiflow-team.github.io/harness-local/install.sh | sh</pre></section>
-  <section class="card"><h2>Quick Start</h2><pre>unzip harness-local-v0.24.1-beta.zip
+<body>
+  <header class="wrap nav">
+    <a class="brand" href="#"><img src="assets/harness-local-mark.svg" alt="Harness Local mark"/><span>Harness Local</span></a>
+    <nav class="navlinks"><a href="#install">Install</a><a href="#safety">Safety</a><a href="#feedback">Feedback</a><a href="https://github.com/ruiflow-team/harness-local">GitHub</a></nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <span class="eyebrow"><span class="dot"></span> v0.24.1 Beta · Seed users wanted</span>
+        <h1><span class="grad">Local-first</span><br/>AI project workbench.</h1>
+        <p class="lead">Run a safe local workspace for AI Agent project checks, release-readiness signals, and verifiable beta workflows — without default cloud upload.</p>
+        <p class="cn">在你的电脑上，把 AI 从聊天变成可验证的任务流。当前开放种子用户测试。</p>
+        <div class="cta">
+          <a class="btn primary" href="https://github.com/ruiflow-team/harness-local/releases/download/v0.24.1-beta/harness-local-v0.24.1-beta.zip">Download v0.24.1</a>
+          <a class="btn ghost" href="docs/CONFIGURATION.md">Configuration</a>
+          <a class="btn ghost" href="https://github.com/ruiflow-team/harness-local/issues/new/choose">Send Feedback</a>
+        </div>
+        <div class="meta">
+          <div class="pill"><b>Local by default</b><span>127.0.0.1 bind</span></div>
+          <div class="pill"><b>Beta QA passed</b><span>Smoke + Doctor checks</span></div>
+          <div class="pill"><b>SHA256 verified</b><span>Immutable release asset</span></div>
+        </div>
+      </div>
+      <div class="product" aria-label="Product preview">
+        <div class="window">
+          <div class="bar"><i></i><i></i><i></i></div>
+          <div class="screen">
+            <div class="status"><span>Release readiness</span><span class="check">PASS</span></div>
+            <pre class="code">curl -L https://ruiflow-team.github.io/harness-local/install.sh | sh
 cd harness-local-v0.24-beta
-./harness serve</pre><p>Open <code>http://127.0.0.1:8788</code></p></section>
-  <section class="card"><h2>Verify</h2><p>SHA256:</p><p class="hash"><code>6a2ba60462ab50a4130920075c35dc3dcd0760246899caa112ac807f31cbb2d0</code></p><pre>shasum -a 256 harness-local-v0.24.1-beta.zip</pre></section>
-  <section class="card"><h2>Configuration</h2><pre>HARNESS_PORT=8789 ./harness serve
-HARNESS_DATA_DIR=/tmp/harness-local-data ./harness serve
-./harness smoke-empty</pre></section>
-  <section class="card"><h2>Safety Defaults</h2><ul><li>Default bind: 127.0.0.1</li><li>No default cloud upload</li><li>No credential file read</li><li>No destructive command execution</li><li>Optional plugins disabled by default</li></ul></section>
-</main></body></html>
+./harness serve
+
+Open http://127.0.0.1:8788</pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="install">
+      <h2 class="section-title">Install in 3 minutes</h2>
+      <p class="section-lead">Use the one-line installer or download the immutable GitHub Release asset.</p>
+      <div class="grid">
+        <div class="card"><div class="icon">1</div><h3>One-line installer</h3><pre class="code">curl -L https://ruiflow-team.github.io/harness-local/install.sh | sh</pre></div>
+        <div class="card"><div class="icon">2</div><h3>Manual install</h3><pre class="code">unzip harness-local-v0.24.1-beta.zip
+cd harness-local-v0.24-beta
+./harness serve</pre></div>
+        <div class="card"><div class="icon">3</div><h3>Verify package</h3><p class="hash">6a2ba60462ab50a4130920075c35dc3dcd0760246899caa112ac807f31cbb2d0</p><pre class="code">shasum -a 256 harness-local-v0.24.1-beta.zip</pre></div>
+      </div>
+    </section>
+
+    <section id="safety">
+      <h2 class="section-title">Safety defaults</h2>
+      <p class="section-lead">This beta is intentionally conservative. It is not a cloud SaaS and does not promise automatic code changes.</p>
+      <div class="grid">
+        <div class="card"><div class="icon">✓</div><h3>127.0.0.1 first</h3><p>Default local bind keeps the web UI on your machine unless you explicitly change it.</p></div>
+        <div class="card"><div class="icon">✓</div><h3>No default upload</h3><p>Projects are not uploaded to a cloud service by default.</p></div>
+        <div class="card"><div class="icon">✓</div><h3>No credential read</h3><p>Credential files and plaintext API keys are outside the beta default flow.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Who should test it?</h2>
+      <div class="steps">
+        <div class="step"><div><b>Developers and builders</b><br/><span class="muted">Need a local-first project check before handing work to AI workflows.</span></div></div>
+        <div class="step"><div><b>Founders and PMs</b><br/><span class="muted">Want to understand whether AI-assisted project execution can become verifiable.</span></div></div>
+        <div class="step"><div><b>Early seed users</b><br/><span class="muted">Willing to spend 3 minutes installing, then tell us what v0.25 should fix first.</span></div></div>
+      </div>
+    </section>
+
+    <section id="feedback">
+      <div class="card">
+        <h2 class="section-title">Join the seed test</h2>
+        <p class="section-lead">Current goal: collect feedback from 10 real users before deciding v0.25 priorities.</p>
+        <div class="cta"><a class="btn primary" href="https://github.com/ruiflow-team/harness-local/issues/new/choose">Submit feedback</a><a class="btn ghost" href="https://github.com/ruiflow-team/harness-local">View GitHub repo</a><a class="btn ghost" href="docs/INSTALL-v0.24.1.md">Read install guide</a></div>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap footer"><div class="brand"><img src="assets/harness-local-mark.svg" alt="Harness Local mark"/><span>Harness Local</span></div><p>Beta software for seed-user testing. Do not paste secrets, private source code, or customer data into public feedback.</p></footer>
+</body>
+</html>
