@@ -112,3 +112,12 @@ Harness Local 现在还很早期。
 如果你愿意成为第一批种子用户，欢迎试一下，也欢迎直接提 issue。
 
 我们会根据这批反馈决定 v0.25 的优先级。
+
+
+## 配图建议
+
+首图建议使用 OpenGraph 横图：
+https://ruiflow-team.github.io/harness-local/assets/social/og-harness-local.png
+
+App 标：
+https://ruiflow-team.github.io/harness-local/assets/harness-local-mark.svg
