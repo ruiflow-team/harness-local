@@ -1,3 +1,8 @@
+[![Release](https://img.shields.io/badge/release-v0.24.1--beta-2ECFB0)](https://github.com/ruiflow-team/harness-local/releases/tag/v0.24.1-beta)
+[![Pages](https://img.shields.io/badge/pages-live-5AA9D6)](https://ruiflow-team.github.io/harness-local/)
+[![Public Check](https://github.com/ruiflow-team/harness-local/actions/workflows/public-check.yml/badge.svg)](https://github.com/ruiflow-team/harness-local/actions/workflows/public-check.yml)
+[![Local First](https://img.shields.io/badge/default-127.0.0.1-667EEA)](#safety-defaults)
+
 # Harness Local v0.24 Beta
 
 Harness Local is a local-first AI Agent execution workbench.
@@ -93,6 +98,13 @@ This beta does **not** promise:
 - Default destructive command execution
 - Enterprise multi-user SaaS features
 
+
+
+## Visual Assets
+
+- App mark: [`assets/harness-local-mark.svg`](assets/harness-local-mark.svg)
+- OpenGraph image: [`assets/social/og-harness-local.png`](assets/social/og-harness-local.png)
+- Douyin cover: [`assets/social/douyin-cover-harness-local.png`](assets/social/douyin-cover-harness-local.png)
 
 ## Seed User Launch Materials
 
