@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Verify bundled package checksum
         run: |
-          cd releases/v0.25.4
+          cd releases/v0.26.0
           sha256sum -c SHA256SUMS
       - name: Verify public docs have expected files
         run: |
@@ -43,17 +43,23 @@ jobs:
       - name: Extract and smoke test package
         run: |
           tmp="$(mktemp -d)"
-          unzip -q releases/v0.25.4/harness-local-v0.25.4-beta.zip -d "$tmp"
-          cd "$tmp/harness-local-v0.25.4-beta"
+          unzip -q releases/v0.26.0/harness-local-v0.26.0-beta.zip -d "$tmp"
+          cd "$tmp/harness-local-v0.26.0-beta"
           HARNESS_DATA_DIR="$tmp/data" ./harness smoke-empty
           HARNESS_DATA_DIR="$tmp/data" ./harness doctor > doctor.json
-          python3 -c "import json; j=json.load(open('doctor.json')); assert j['version']=='0.25.4'; assert j['diagnosis']['version']=='doctor-diagnosis-v0.25.4'; [j.__getitem__(k) for k in ['release_readiness','claim_boundary','safe_share_checklist','share_contract']]; assert j['share_contract']['version']=='share-contract-v0.25.4'; assert j['share_contract']['not_proof_of_external_validation'] is True"
+          python3 -c "import json; j=json.load(open('doctor.json')); assert j['version']=='0.26.0'; assert j['diagnosis']['version']=='doctor-diagnosis-v0.26.0'; [j.__getitem__(k) for k in ['release_readiness','claim_boundary','safe_share_checklist','share_contract']]; assert j['share_contract']['version']=='share-contract-v0.26.0'; assert j['share_contract']['not_proof_of_external_validation'] is True"
           HARNESS_DATA_DIR="$tmp/data" ./harness doctor-report | grep -q "Harness Local Doctor"
           HARNESS_DATA_DIR="$tmp/data" ./harness checkup-sample > checkup-sample-summary.json
           test -f dist/evidence/CHECKUP-SAMPLE/checkup-sample.json
           test -f dist/evidence/CHECKUP-SAMPLE/CHECKUP-SAMPLE.md
           test -f docs/CHECKUP-SAMPLE-SCHEMA.md
-          python3 -c "import json; j=json.load(open('dist/evidence/CHECKUP-SAMPLE/checkup-sample.json')); assert j['schema_version']=='harness-checkup-sample-v0.25.4'; assert j['share_contract']['version']=='share-contract-v0.25.4'; assert j['readiness']=='red'"
+          python3 -c "import json; j=json.load(open('dist/evidence/CHECKUP-SAMPLE/checkup-sample.json')); assert j['schema_version']=='harness-checkup-sample-v0.26.0'; assert j['share_contract']['version']=='share-contract-v0.26.0'; assert j['readiness']=='red'"
+          HARNESS_DATA_DIR="$tmp/data" ./harness project-checkup > project-checkup-summary.json
+          test -f dist/evidence/PROJECT-CHECKUP/project-checkup.json
+          test -f dist/evidence/PROJECT-CHECKUP/PROJECT-CHECKUP.md
+          test -f docs/QUICK-CHECKUP.md
+          test -f docs/PROJECT-CHECKUP-SCHEMA.md
+          python3 -c "import json; j=json.load(open('dist/evidence/PROJECT-CHECKUP/project-checkup.json')); assert j['schema_version']=='project-checkup-v0.26.0'; assert j['share_contract']['version']=='share-contract-v0.26.0'; assert j['local_only'] is True; assert j['commercial_boundary']['lead_capture_online'] is False"
           HARNESS_DATA_DIR="$tmp/data" ./harness feedback-bundle
           test -f dist/evidence/FEEDBACK-BUNDLE/DOCTOR-REPORT.md
-          python3 -c "import json; j=json.load(open('dist/evidence/FEEDBACK-BUNDLE/doctor.json')); assert j['share_contract']['version']=='share-contract-v0.25.4'"
+          python3 -c "import json; j=json.load(open('dist/evidence/FEEDBACK-BUNDLE/doctor.json')); assert j['share_contract']['version']=='share-contract-v0.26.0'"
