@@ -1,0 +1,45 @@
+name: Project Checkup 反馈
+description: 反馈 Project Checkup / AI 项目体检所的安装、运行、报告理解问题。不要提交源码、凭证或客户数据。
+title: "[Project Checkup] "
+labels: ["project-checkup", "feedback"]
+body:
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: 安全确认
+      description: 公开提交前请先脱敏。
+      options:
+        - label: 我没有提交源码、凭证、token、API key、cookie、session 或客户数据。
+          required: true
+        - label: 我理解这不是安全审计认证、客户案例、付费验证或生产可用证明。
+          required: true
+  - type: dropdown
+    id: project_type
+    attributes:
+      label: 项目类型
+      options:
+        - AI MVP / vibe-coded app
+        - 低代码项目
+        - 外包项目
+        - 内部工具
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: command_result
+    attributes:
+      label: 命令结果
+      description: 可以粘贴脱敏后的 project-checkup-summary.json 或错误摘要。不要粘贴源码/密钥。
+      placeholder: ./harness project-checkup 的脱敏输出摘要
+    validations:
+      required: true
+  - type: textarea
+    id: confusing
+    attributes:
+      label: 哪里看不懂或不够有用？
+      placeholder: RED/YELLOW/GREEN、Claim Boundary、Safe Share、Feedback 模板等
+  - type: textarea
+    id: expected
+    attributes:
+      label: 你希望它下一步帮你判断什么？
+      placeholder: 例如：上线风险、AI 改代码前风险、外包验收、对外宣传边界

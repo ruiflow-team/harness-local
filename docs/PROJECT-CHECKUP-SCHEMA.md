@@ -1,4 +1,4 @@
-# Project Checkup Schema（v0.26.1）
+# Project Checkup Schema（v0.26.2）
 
 `./harness project-checkup` 生成本地 AI 项目体检包。
 
@@ -18,7 +18,7 @@ dist/evidence/PROJECT-CHECKUP/
 
 ```json
 {
-  "schema_version": "project-checkup-v0.26.1",
+  "schema_version": "project-checkup-v0.26.2",
   "product": "Project Checkup / AI 项目体检所",
   "status": "PASS|WARN|FAIL",
   "readiness": "green|yellow|red",
