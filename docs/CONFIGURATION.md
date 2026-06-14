@@ -56,11 +56,16 @@ Expected status: `PASS`.
 From the extracted directory:
 
 ```bash
-shasum -a 256 ../harness-local-v0.24.4-beta.zip
+shasum -a 256 ../harness-local-v0.24.5-beta.zip
 ```
 
 Expected SHA256:
 
 ```text
-52fd5649a0c49d76472616ca381fd4a905a8e86eb4164ef5a1f1c1f9241560b5
+7fc0949caf12558942b7cfb45240b3895b94e74e018971dc3185c4886b2df646
 ```
+
+
+## Feedback Bundle
+
+`./harness feedback-bundle` 只在本机 `dist/evidence/TRIAL-BUNDLE/` 生成脱敏反馈包，不上传、不复制原始反馈 JSONL。

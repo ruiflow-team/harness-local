@@ -1,9 +1,9 @@
 #!/usr/bin/env sh
 set -eu
 
-VERSION="v0.24.4-beta"
-FILE="harness-local-v0.24.4-beta.zip"
-SHA256="52fd5649a0c49d76472616ca381fd4a905a8e86eb4164ef5a1f1c1f9241560b5"
+VERSION="v0.24.5-beta"
+FILE="harness-local-v0.24.5-beta.zip"
+SHA256="7fc0949caf12558942b7cfb45240b3895b94e74e018971dc3185c4886b2df646"
 BASE_URL="https://github.com/ruiflow-team/harness-local/releases/download/${VERSION}"
 INSTALL_DIR="${HARNESS_INSTALL_DIR:-$PWD}"
 
@@ -40,11 +40,11 @@ if [ "$actual" != "$SHA256" ]; then
 fi
 
 echo "Checksum OK"
-rm -rf harness-local-v0.24.4-beta
+rm -rf harness-local-v0.24.5-beta
 unzip -q "$FILE"
 
-echo "Installed to: $INSTALL_DIR/harness-local-v0.24.4-beta"
+echo "Installed to: $INSTALL_DIR/harness-local-v0.24.5-beta"
 echo "Run:"
-echo "  cd '$INSTALL_DIR/harness-local-v0.24.4-beta'"
+echo "  cd '$INSTALL_DIR/harness-local-v0.24.5-beta'"
 echo "  ./harness serve"
 echo "Open: http://127.0.0.1:8788"

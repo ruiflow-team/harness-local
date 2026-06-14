@@ -13,7 +13,7 @@
   <text x="540" y="1102" text-anchor="middle" fill="#C7D7EA" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="750">不读取凭证文件</text>
   <text x="540" y="1176" text-anchor="middle" fill="#C7D7EA" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="750">默认 127.0.0.1</text>
   <rect x="250" y="1300" width="580" height="96" rx="30" fill="#2ECFB0"/>
-  <text x="540" y="1363" text-anchor="middle" fill="#03111D" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="900">招 10 个种子用户</text>
+  <text x="540" y="1363" text-anchor="middle" fill="#03111D" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="900">本地 AI 项目体检</text>
   <text x="540" y="1530" text-anchor="middle" fill="#9FB3CC" font-family="Inter, Arial, sans-serif" font-size="32">GitHub: ruiflow-team/harness-local</text>
   <text x="540" y="1590" text-anchor="middle" fill="#9FB3CC" font-family="Inter, Arial, sans-serif" font-size="32">v0.24.1 Beta</text>
 </svg>

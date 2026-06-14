@@ -1,0 +1,97 @@
+name: 试用反馈 / 安装问题
+about: 提交 Harness Local Beta 的安装、启动、自检或使用反馈
+labels: [feedback]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢试用 Harness Local Beta。请不要粘贴密钥、API Key、私有源码、客户数据或任何不可公开信息。
+        如果需要贴日志，请先脱敏，只保留命令、错误摘要和环境信息。
+  - type: dropdown
+    id: feedback_type
+    attributes:
+      label: 反馈类型
+      options:
+        - 安装失败
+        - 启动失败
+        - doctor / smoke 自检问题
+        - 页面或文档看不懂
+        - 功能建议
+        - 其他
+    validations:
+      required: true
+  - type: input
+    id: role
+    attributes:
+      label: 你的角色
+      placeholder: 开发者 / 创始人 / 产品 / 设计 / 学生 / 其他
+  - type: dropdown
+    id: os
+    attributes:
+      label: 操作系统
+      options:
+        - macOS
+        - Windows
+        - Linux
+        - 其他
+    validations:
+      required: true
+  - type: input
+    id: python
+    attributes:
+      label: Python 版本
+      placeholder: python3 --version
+  - type: textarea
+    id: command
+    attributes:
+      label: 你执行了什么命令？
+      description: 只贴命令本身，不要贴密钥、路径中的敏感客户名或私有信息。
+      placeholder: curl -L ... | sh / ./harness serve / ./harness doctor
+    validations:
+      required: true
+  - type: dropdown
+    id: install_status
+    attributes:
+      label: 安装 / 启动结果
+      options:
+        - 一次成功
+        - 修了一点后成功
+        - 失败，尚未解决
+        - 还没安装，只是看文档
+    validations:
+      required: true
+  - type: textarea
+    id: error_summary
+    attributes:
+      label: 报错摘要 / 现象
+      description: 请贴脱敏摘要；不要粘贴私有源码、密钥、客户数据。
+      placeholder: 例如：端口 8788 被占用 / doctor 某项 WARN / 页面打不开 / zip 解压失败
+  - type: dropdown
+    id: value
+    attributes:
+      label: 当前 Beta 对你是否有用？
+      options:
+        - 5 - 很有用，会继续试
+        - 4 - 有用，但需要小修
+        - 3 - 有意思，但还不清楚怎么用
+        - 2 - 目前还不太有用
+        - 1 - 没看懂
+    validations:
+      required: true
+  - type: textarea
+    id: desired_next
+    attributes:
+      label: 你最希望 v0.25 先改什么？
+      placeholder: 安装引导 / 项目报告 / doctor 解释 / 安全检查 / UI / Windows 支持 / 文档 / 其他
+  - type: checkboxes
+    id: safety_confirm
+    attributes:
+      label: 安全确认
+      options:
+        - label: 我确认本 issue 没有包含密钥、API Key、私有源码、客户数据或不可公开信息。
+          required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: 其他补充
+      description: 可选；请继续保持脱敏。

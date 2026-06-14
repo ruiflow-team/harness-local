@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Verify bundled package checksum
         run: |
-          cd releases/v0.24.4
+          cd releases/v0.24.5
           sha256sum -c SHA256SUMS
       - name: Verify public docs have expected files
         run: |
@@ -21,10 +21,30 @@ jobs:
           test -f docs/INSTALL.md
           test -f docs/CONFIGURATION.md
           test -f install.sh
+
+      - name: Guard public Chinese wording and version regressions
+        run: |
+          set -euo pipefail
+          forbidden='招 10|种子用户|seed-user|Seed user|第一批真实用户|限量|私信|评论区领取|名额|v0\.24\.[0-9]+\.[0-9]+'
+          if grep -RInE "$forbidden" \
+            --exclude-dir=.git \
+            --exclude-dir=releases \
+            --exclude='public-check.yml' \
+            --exclude='*.png' \
+            --exclude='*.jpg' \
+            --exclude='*.jpeg' \
+            --exclude='*.webp' \
+            .; then
+            echo "Forbidden public wording or version regression found." >&2
+            exit 1
+          fi
+          grep -q '试用反馈 / 安装问题' .github/ISSUE_TEMPLATE/trial-feedback.yml
+          grep -q '欢迎提交安装、启动、自检或使用问题' README.md
       - name: Extract and smoke test package
         run: |
           tmp="$(mktemp -d)"
-          unzip -q releases/v0.24.4/harness-local-v0.24.4-beta.zip -d "$tmp"
-          cd "$tmp/harness-local-v0.24.4-beta"
+          unzip -q releases/v0.24.5/harness-local-v0.24.5-beta.zip -d "$tmp"
+          cd "$tmp/harness-local-v0.24.5-beta"
           HARNESS_DATA_DIR="$tmp/data" ./harness smoke-empty
           HARNESS_DATA_DIR="$tmp/data" ./harness doctor
+          HARNESS_DATA_DIR="$tmp/data" ./harness feedback-bundle

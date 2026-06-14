@@ -35,20 +35,20 @@ Harness Local 是一个本地优先的 AI Agent 执行工作台。
 拿到文件：
 
 ```text
-harness-local-v0.24.4-beta.zip
+harness-local-v0.24.5-beta.zip
 ```
 
 SHA256：
 
 ```text
-52fd5649a0c49d76472616ca381fd4a905a8e86eb4164ef5a1f1c1f9241560b5
+7fc0949caf12558942b7cfb45240b3895b94e74e018971dc3185c4886b2df646
 ```
 
 解压并启动：
 
 ```bash
-unzip harness-local-v0.24.4-beta.zip
-cd harness-local-v0.24.4-beta
+unzip harness-local-v0.24.5-beta.zip
+cd harness-local-v0.24.5-beta
 ./harness serve
 ```
 
@@ -97,7 +97,7 @@ HARNESS_DATA_DIR=/tmp/harness-local-data ./harness serve
 5. 在 Reports 里点击 View inline 查看 Markdown 报告。
 6. 打开 Release / Package 区域，看 Package QA 状态。
 
-## 请反馈 6 个问题
+## 请反馈 6 个问题（脱敏）
 
 1. 你是否能顺利启动？如果不能，卡在哪一步？
 2. 你是否能理解 Harness Local 是干什么的？
@@ -114,3 +114,8 @@ HARNESS_DATA_DIR=/tmp/harness-local-data ./harness serve
 - 不默认自动改代码。
 - 不默认执行破坏性命令。
 - 不作为企业级多人协作 SaaS 发布。
+
+
+## 脱敏反馈包
+
+如遇安装或自检问题，可运行 `./harness feedback-bundle` 生成本地脱敏反馈包；公开提交前请先人工检查。
