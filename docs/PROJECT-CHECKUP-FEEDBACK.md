@@ -1,4 +1,4 @@
-# Project Checkup Feedback（v0.26.2）
+# Project Checkup Feedback（v0.26.3）
 
 `./harness project-checkup-feedback` 会在本地生成反馈模板，帮助用户整理 Project Checkup 的使用反馈。
 
