@@ -1,6 +1,6 @@
 # Checkup Sample Schema
 
-Harness Local v0.26.0 adds a documented local checkup sample format.
+Harness Local v0.25.4 adds a documented local checkup sample format.
 
 Run:
 
@@ -21,7 +21,7 @@ This sample is deidentified and local-only. It is not a customer case, not paid 
 
 | Field | Type | Meaning |
 | --- | --- | --- |
-| `schema_version` | string | Sample schema version, for v0.26.0: `harness-checkup-sample-v0.26.0`. |
+| `schema_version` | string | Sample schema version, for v0.25.4: `harness-checkup-sample-v0.25.4`. |
 | `generated_at` | string | Local generation timestamp. |
 | `sample_kind` | string | Example kind. Current value: `deidentified_internal_ai_project`. |
 | `harness_version` | string | Harness Local version that generated the sample. |
