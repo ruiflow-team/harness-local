@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Harness Local v0.24.6 Beta｜本地 AI 项目体检工具 · 中文本地面板</title>
-  <meta name="description" content="Harness Local 是一个本地优先的 AI 项目体检工具，v0.24.6 起主面板和发布内页中文优先；默认 127.0.0.1、本地运行、不默认上传项目。" />
-  <meta property="og:title" content="Harness Local v0.24.6 Beta｜本地 AI 项目体检工具 · 中文本地面板" />
+  <title>Harness Local v0.25.0 Beta｜本地 AI 项目体检工具 · 中文本地面板</title>
+  <meta name="description" content="Harness Local 是一个本地优先的 AI 项目体检工具，v0.25.0 起主面板和发布内页中文优先；默认 127.0.0.1、本地运行、不默认上传项目。" />
+  <meta property="og:title" content="Harness Local v0.25.0 Beta｜本地 AI 项目体检工具 · 中文本地面板" />
   <meta property="og:description" content="中文本地面板，默认本地运行，不默认上传项目，不读取凭证文件。" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ruiflow-team.github.io/harness-local/" />
@@ -13,7 +13,7 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Harness Local v0.24.6 Beta" />
+  <meta name="twitter:title" content="Harness Local v0.25.0 Beta" />
   <meta name="twitter:description" content="本地优先的 AI 项目体检工具。" />
   <meta name="twitter:image" content="https://ruiflow-team.github.io/harness-local/assets/social/og-harness-local.png" />
   <meta name="theme-color" content="#07111F" />
@@ -42,12 +42,12 @@
   <main class="wrap">
     <section class="hero">
       <div>
-        <span class="eyebrow"><span class="dot"></span> v0.24.6 Beta · 中文本地面板</span>
+        <span class="eyebrow"><span class="dot"></span> v0.25.0 Beta · 中文本地面板</span>
         <h1><span class="grad">本地 AI</span><br/>项目体检工具</h1>
         <p class="lead">Harness Local 帮你在电脑本地启动一个 AI 项目工作台，先做安全边界、启动状态和交付准备度检查。</p>
-        <p class="sub">默认绑定 127.0.0.1，不默认上传项目，不读取凭证文件。v0.24.6 修复版本号显示与发布中心 / 安装包 QA / 反馈页中文化；当前适合开发者先在本机做项目体检，再决定下一步；v0.24.6 新增脱敏反馈包 feedback-bundle。</p>
+        <p class="sub">默认绑定 127.0.0.1，不默认上传项目，不读取凭证文件。v0.25.0 新增 doctor 三层诊断、doctor-report 体检报告和带 DOCTOR-REPORT.md 的脱敏反馈包，适合开发者先在本机做项目体检，再决定下一步。</p>
         <div class="cta">
-          <a class="btn primary" href="https://github.com/ruiflow-team/harness-local/releases/download/v0.24.6-beta/harness-local-v0.24.6-beta.zip">下载 v0.24.6 Beta</a>
+          <a class="btn primary" href="https://github.com/ruiflow-team/harness-local/releases/download/v0.25.0-beta/harness-local-v0.25.0-beta.zip">下载 v0.25.0 Beta</a>
           <a class="btn ghost" href="docs/CONFIGURATION.md">查看配置说明</a>
           <a class="btn ghost" href="https://github.com/ruiflow-team/harness-local/issues/new/choose">提交试用反馈</a>
         </div>
@@ -59,7 +59,7 @@
       </div>
       <div class="product" aria-label="产品预览">
         <div class="window"><div class="bar"><i></i><i></i><i></i></div><div class="screen"><div class="status"><span>Release readiness</span><span class="check">PASS</span></div><pre class="code">curl -L https://ruiflow-team.github.io/harness-local/install.sh | sh
-cd harness-local-v0.24.6-beta
+cd harness-local-v0.25.0-beta
 ./harness serve
 
 打开 http://127.0.0.1:8788</pre></div></div>
@@ -71,10 +71,10 @@ cd harness-local-v0.24.6-beta
       <p class="section-lead">可以一键安装，也可以手动下载 GitHub Release 包。</p>
       <div class="grid">
         <div class="card"><div class="icon">1</div><h3>一键安装</h3><pre class="code">curl -L https://ruiflow-team.github.io/harness-local/install.sh | sh</pre></div>
-        <div class="card"><div class="icon">2</div><h3>手动启动</h3><pre class="code">unzip harness-local-v0.24.6-beta.zip
-cd harness-local-v0.24.6-beta
+        <div class="card"><div class="icon">2</div><h3>手动启动</h3><pre class="code">unzip harness-local-v0.25.0-beta.zip
+cd harness-local-v0.25.0-beta
 ./harness serve</pre></div>
-        <div class="card"><div class="icon">3</div><h3>校验下载包</h3><p class="hash">3b3bf17cd9bf2356f6d4f9ac44f5b04a1fa0e09875baf7831635f26bfabc0db3</p><pre class="code">shasum -a 256 harness-local-v0.24.6-beta.zip</pre></div>
+        <div class="card"><div class="icon">3</div><h3>校验下载包</h3><p class="hash">5cf9e538e0b2ce83a4be270cf6dfb1e7f0310764307b999f574e2bcaeb95e35e</p><pre class="code">shasum -a 256 harness-local-v0.25.0-beta.zip</pre></div>
       </div>
     </section>
 
