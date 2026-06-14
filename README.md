@@ -97,7 +97,7 @@ HARNESS_DATA_DIR=/tmp/harness-local-data ./harness serve
 ./harness feedback-bundle
 ```
 
-输出目录：`dist/evidence/TRIAL-BUNDLE/`。请先人工检查 `README.md`、`FEEDBACK-SUMMARY.md`、`doctor.json`，确认没有密钥、私有源码或客户数据，再提交公开 issue。
+输出目录：`dist/evidence/FEEDBACK-BUNDLE/`。请先人工检查 `README.md`、`FEEDBACK-SUMMARY.md`、`DOCTOR-REPORT.md`、`doctor.json`，确认没有密钥、私有源码、原始反馈 JSONL 或客户数据，再提交公开 issue。
 
 ## 反馈
 
@@ -114,7 +114,7 @@ HARNESS_DATA_DIR=/tmp/harness-local-data ./harness serve
 
 ## v0.25.0 Beta：Doctor 体检报告
 
-v0.25.0 Beta 候选新增：
+v0.25.0 Beta 新增：
 
 - `./harness doctor` 输出 `diagnosis` 三层体检：`must_fix` / `should_fix` / `can_ignore`。
 - `./harness doctor-report` 输出 Markdown 体检报告，适合本地自查与反馈前人工检查。

@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Verify bundled package checksum
         run: |
-          cd releases/v0.24.6
+          cd releases/v0.25.0
           sha256sum -c SHA256SUMS
       - name: Verify public docs have expected files
         run: |
@@ -25,7 +25,7 @@ jobs:
       - name: Guard public Chinese wording and version regressions
         run: |
           set -euo pipefail
-          forbidden='招 10|种子用户|seed-user|Seed user|第一批真实用户|限量|私信|评论区领取|名额|v0\.24\.[0-9]+\.[0-9]+'
+          forbidden='招 10|种子用户|seed-user|SEED-USER|Seed user|第一批真实用户|限量|私信|评论区领取|名额|v0\.24\.[0-9]+\.[0-9]+|TRIAL-BUNDLE|harness-local-v0\.24\.6+'
           if grep -RInE "$forbidden" \
             --exclude-dir=.git \
             --exclude-dir=releases \
@@ -43,8 +43,10 @@ jobs:
       - name: Extract and smoke test package
         run: |
           tmp="$(mktemp -d)"
-          unzip -q releases/v0.24.6/harness-local-v0.24.6-beta.zip -d "$tmp"
-          cd "$tmp/harness-local-v0.24.6-beta"
+          unzip -q releases/v0.25.0/harness-local-v0.25.0-beta.zip -d "$tmp"
+          cd "$tmp/harness-local-v0.25.0-beta"
           HARNESS_DATA_DIR="$tmp/data" ./harness smoke-empty
           HARNESS_DATA_DIR="$tmp/data" ./harness doctor
+          HARNESS_DATA_DIR="$tmp/data" ./harness doctor-report | grep -q "Harness Local Doctor"
           HARNESS_DATA_DIR="$tmp/data" ./harness feedback-bundle
+          test -f dist/evidence/FEEDBACK-BUNDLE/DOCTOR-REPORT.md

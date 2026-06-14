@@ -47,6 +47,7 @@ Do not expose the beta server to the public internet. If you need remote access,
 ```bash
 ./harness smoke-empty
 ./harness doctor
+./harness doctor-report
 ```
 
 Expected status: `PASS`.
@@ -56,16 +57,16 @@ Expected status: `PASS`.
 From the extracted directory:
 
 ```bash
-shasum -a 256 ../harness-local-v0.24.6-beta.zip
+shasum -a 256 ../harness-local-v0.25.0-beta.zip
 ```
 
 Expected SHA256:
 
 ```text
-3b3bf17cd9bf2356f6d4f9ac44f5b04a1fa0e09875baf7831635f26bfabc0db3
+5cf9e538e0b2ce83a4be270cf6dfb1e7f0310764307b999f574e2bcaeb95e35e
 ```
 
 
 ## Feedback Bundle
 
-`./harness feedback-bundle` 只在本机 `dist/evidence/TRIAL-BUNDLE/` 生成脱敏反馈包，不上传、不复制原始反馈 JSONL。
+`./harness feedback-bundle` 只在本机 `dist/evidence/FEEDBACK-BUNDLE/` 生成脱敏反馈包，并包含 `DOCTOR-REPORT.md`；不上传、不复制原始反馈 JSONL、源码、密钥或客户数据。
