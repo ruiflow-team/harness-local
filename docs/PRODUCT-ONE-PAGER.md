@@ -1,4 +1,4 @@
-# Harness Local v0.25.1 Beta｜产品功能一页说明
+# Harness Local v0.25.2 Beta｜产品功能一页说明
 
 状态：公开 Beta；本地优先的 AI 项目体检工具
 
@@ -34,20 +34,20 @@ Harness Local 是一个本地优先的 AI 项目体检工具。
 下载：
 
 ```text
-harness-local-v0.25.1-beta.zip
+harness-local-v0.25.2-beta.zip
 ```
 
 SHA256：
 
 ```text
-010f58e5cf97b0024d8276c02d8939f032a44be19e41afe0d675d2e5afdc821e
+9a50e0aa48236666d07eea6971ad98ef271e225e6cb53f7bce08fa6c601b368c
 ```
 
 解压并启动：
 
 ```bash
-unzip harness-local-v0.25.1-beta.zip
-cd harness-local-v0.25.1-beta
+unzip harness-local-v0.25.2-beta.zip
+cd harness-local-v0.25.2-beta
 ./harness serve
 ```
 

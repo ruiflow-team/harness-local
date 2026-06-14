@@ -1,4 +1,4 @@
-# 抖音短视频脚本｜Harness Local v0.25.1 产品功能介绍
+# 抖音短视频脚本｜Harness Local v0.25.2 产品功能介绍
 
 ## 标题
 
@@ -23,4 +23,4 @@
 不要写任何转化型邀约话术；只讲产品功能和使用边界。
 
 
-版本补充：v0.25.1 新增 doctor 三层诊断、doctor-report 体检报告和本地脱敏反馈包 feedback-bundle。
+版本补充：v0.25.2 新增 doctor 三层诊断、doctor-report 体检报告和本地脱敏反馈包 feedback-bundle。
