@@ -1,7 +1,10 @@
 [![Release](https://img.shields.io/badge/release-v0.26.3--beta-2ECFB0)](https://github.com/ruiflow-team/harness-local/releases/tag/v0.26.3-beta)
+[![License](https://img.shields.io/badge/license-Apache%202.0-667EEA)](LICENSE)
 [![Pages](https://img.shields.io/badge/pages-live-5AA9D6)](https://ruiflow-team.github.io/harness-local/)
 [![Public Check](https://github.com/ruiflow-team/harness-local/actions/workflows/public-check.yml/badge.svg)](https://github.com/ruiflow-team/harness-local/actions/workflows/public-check.yml)
-[![Local First](https://img.shields.io/badge/default-127.0.0.1-667EEA)](#安全边界)
+[![¥0](https://img.shields.io/badge/启动成本-¥0-FF8C00)](#-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B)
+[![Local First](https://img.shields.io/badge/default-127.0.0.1-667EEA)](#%E5%AE%89%E5%85%A8%E8%BE%B9%E7%95%8C)
+[![Discussions](https://img.shields.io/github/discussions/ruiflow-team/harness-local?color=5AA9D6)](https://github.com/ruiflow-team/harness-local/discussions)
 
 # Harness Local
 
@@ -10,6 +13,20 @@
 Harness Local 帮你在电脑本地启动一个轻量 AI 项目工作台，先做项目接入前的安全边界、启动状态和交付准备度检查。
 
 当前版本是 Beta：默认中文面板、默认中文说明、默认本地运行、默认绑定 `127.0.0.1`。
+
+> 🛡️ **可看作 AI 项目的「发走前诊所」**：AI 项目发上线前，先跑 `./harness doctor` 看安全/启动/交付准备度，避免带货上架。
+>
+> ⭐ 如果对你有帮助，点个 Star 让更多人看见～
+
+## 🎯 为什么选 Harness Local
+
+| 其他方案 | Harness Local |
+|---|---|
+| 云端 AI 平台 = 上传你的项目代码 | **100% 本地，`127.0.0.1` 默认绑定** |
+| 人工 code review = 贵 + 慢 | **自动体检，三层诊断 must_fix / should_fix / can_ignore** |
+| pre-commit hooks = 单点检查 | **全项目体检报告 + 脱敏反馈包** |
+| 生产环境事后补救 | **发上线前提前发现安全/启动/发布问题** |
+
 
 官网说明页：<https://ruiflow-team.github.io/harness-local/>
 
