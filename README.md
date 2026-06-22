@@ -224,3 +224,23 @@ v0.26.3 Beta 补齐了 `./harness checkup-sample` 的字段说明和安全解读
 
 候选包：`harness-local-v0.26.3-beta.zip`
 SHA256：`aa0b45ced035f1bed4ab017167ee399892632d4b2350c71dbda45ee6e5793004`
+
+---
+
+## 🆓 免费 AI 项目体检
+
+你的 AI 项目上线前，先做个「真假落地」快速诊断：
+
+- **10 项落地指数评分**（满分 30）
+- **前 3 大风险标注** + 严重程度
+- **1 条最小可行动作**（立刻能做的改进）
+
+### 如何获取免费体检？
+
+1. 在本仓库 [Discussions](https://github.com/ruiflow-team/harness-local/discussions) 发帖，标题格式：`[体检申请] 你的项目名`
+2. 包含：项目 GitHub 链接或产品页 + 一句话描述你的项目做什么
+3. 我们会在 **24 小时内** 回复一份公开体检报告
+
+> ⚠️ 免费体检只基于公开信息，不登录、不读私有代码、不做安全审计认证。
+
+📋 [查看完整体检模板和评分维度](https://gist.github.com/ruiflow-team/c1c8fdd1a6b8437660b0de946dd301b4)
